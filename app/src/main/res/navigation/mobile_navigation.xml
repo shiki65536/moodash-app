@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home_fragment">
+
+    <fragment
+        android:id="@+id/nav_home_fragment"
+        android:name="com.example.moodapp.FragmentHome"
+        android:label="@string/homeString" >
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_mood_fragment"
+            app:destination="@id/nav_mood_fragment" />
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_map_fragment"
+            app:destination="@id/nav_map_fragment" />
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_collection_fragment"
+            app:destination="@id/nav_collection_fragment" />
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_record_fragment"
+            app:destination="@id/nav_record_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mood_fragment"
+        android:name="com.example.moodapp.mood.FragmentMood"
+        android:label="@string/moodString" />
+    <fragment
+        android:id="@+id/nav_record_fragment"
+        android:name="com.example.moodapp.record.FragmentRecord"
+        android:label="@string/recordString" />
+    <fragment
+        android:id="@+id/nav_map_fragment"
+        android:name="com.example.moodapp.map.FragmentMap"
+        android:label="@string/mapString" />
+    <fragment
+        android:id="@+id/nav_collection_fragment"
+        android:name="com.example.moodapp.collection.FragmentCollection"
+        android:label="@string/collectionString" />
+</navigation>

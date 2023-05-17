@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- DatePicker view -->
+    <EditText
+        android:id="@+id/etStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="@string/select_start_date"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp" />
+    <EditText
+        android:id="@+id/etEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:hint="@string/select_end_date"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp" />
+
+    <!-- RadioGroup for selecting graph type -->
+    <RadioGroup
+        android:id="@+id/rgGraphType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/etEndDate">
+        <RadioButton
+            android:id="@+id/rbPieChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pie"
+            android:layout_marginRight="20dp"/>
+        <RadioButton
+            android:id="@+id/rbBarChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bar" />
+    </RadioGroup>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Graphs -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/rgGraphType"
+        android:layout_above="@+id/btnFacebookShareLink"/>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/rgGraphType"
+        android:layout_above="@+id/btnFacebookShareLink"/>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_data"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/rgGraphType" />
+
+    <Button
+        android:id="@+id/btnFacebookShareLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/share_link"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mood_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/how_is_your_day_user_name"
+                android:textStyle="bold"
+                android:textColor="@color/_273431"
+                android:textSize="24sp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray"
+                android:padding="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/check_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ca"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:drawablePadding="10dp"
+                    android:textSize="16sp"
+                    android:text="@string/please_enter_the_date"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/check_date_view"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white">
+
+                    <com.aigestudio.wheelpicker.widgets.WheelDayPicker
+                        android:id="@+id/check_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:wheel_indicator="true"
+                        app:wheel_indicator_color="@color/black_60"
+                        app:wheel_indicator_size="3dp"
+                        app:wheel_item_space="60dp"
+                        app:wheel_visible_item_count="3"
+                        app:wheel_item_text_size="18sp"
+                        app:wheel_item_text_color="@color/_979797"
+                        app:wheel_selected_item_text_color="@color/black"/>
+
+                    <com.aigestudio.wheelpicker.widgets.WheelMonthPicker
+                        android:id="@+id/check_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:wheel_indicator="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:wheel_indicator_color="@color/black_60"
+                        app:wheel_indicator_size="3dp"
+                        app:wheel_item_space="60dp"
+                        app:wheel_visible_item_count="3"
+                        app:wheel_item_text_size="18sp"
+                        app:wheel_item_text_color="@color/_979797"
+                        app:wheel_selected_item_text_color="@color/black"/>
+
+
+                    <com.aigestudio.wheelpicker.widgets.WheelYearPicker
+                        android:id="@+id/check_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:wheel_indicator="true"
+                        app:wheel_indicator_color="@color/black_60"
+                        app:wheel_indicator_size="3dp"
+                        app:wheel_item_space="60dp"
+                        app:wheel_visible_item_count="3"
+                        app:wheel_item_text_size="18sp"
+                        app:wheel_item_text_color="@color/_979797"
+                        app:wheel_selected_item_text_color="@color/black"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_mood"
+                    android:overScrollMode="never"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="@string/write_something_to_remember"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/mood_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/transparent"
+                    android:minHeight="150dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/_979797"
+                    android:hint="@string/text"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/check_delete"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/no_icon3"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mood_record"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/record"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

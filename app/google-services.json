@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850121380586",
+    "project_id": "fit5046-app",
+    "storage_bucket": "fit5046-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850121380586:android:1925b386c307ad60423d93",
+        "android_client_info": {
+          "package_name": "com.example.moodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850121380586-iralpkblvl9i8fdufkh9hti91ds72l78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1v6L0rWY0FerpOIT6U8dI5l5P1F017iM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850121380586-iralpkblvl9i8fdufkh9hti91ds72l78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
